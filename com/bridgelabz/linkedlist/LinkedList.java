@@ -75,12 +75,16 @@ public class LinkedList<T> {
 		}
 		PreviousNode.next = null;
 	}
+	/**
+	 * Added : Search operation Function
+	 * @param data
+	 */
 	public void SearchOperation (T data ) {
 		Node<T> P = head;
 		P.data=data;
 		while(P !=null) {
 			if(P.data==data) {
-				System.out.println("Element Found");
+				System.out.println("Element Found"  + " "+( P.data));
 				break;
 			}
 			P=P.next;
