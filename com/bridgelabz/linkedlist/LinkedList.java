@@ -74,7 +74,8 @@ public class LinkedList<T> {
 			node = node.next;
 		}
 		PreviousNode.next = null;
-	}
+	}		
+		
 	/**
 	 * Added : Search operation Function
 	 * @param data
@@ -84,12 +85,44 @@ public class LinkedList<T> {
 		P.data=data;
 		while(P !=null) {
 			if(P.data==data) {
-				System.out.println("Element Found"  + " "+( P.data));
+				System.out.println("Element Found");
 				break;
 			}
 			P=P.next;
 		}
 		
+	}
+	/**
+	 * @param Remove data by using index value
+	 */
+	public void deleteAt(int index ) {
+		if (index == 0) {
+			head = head.next;
+		} else {
+			Node<T> node = head;
+			Node<T> PreviousNode = null;
+			for (int i = 0; i < index - 1; i++) {
+				node = node.next;
+			}
+			PreviousNode = node.next;
+			node.next = PreviousNode.next;
+		}
+	}
+		
+	
+	public int size() {
+		Node<T> node = head;
+		int count = 0;
+		if(node != null) {
+			while((node.next != null) || (node.data != null)) {
+				node = node.next;
+				count++;
+				if(node == null) {
+					break;
+				}
+			}
+		}
+		return count;
 	}
 	/**
 	 * Printing The Data Of Node till next equal to null
