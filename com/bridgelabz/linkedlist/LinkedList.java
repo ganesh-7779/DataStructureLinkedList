@@ -37,6 +37,22 @@ public class LinkedList<T> {
 		node.next=head;
 		head=node;
 	}
+	public void AddAtIndex(int index, T data) {
+		Node<T> newNode = new Node<>();
+		newNode.data = data;
+
+		if (index == 0) {
+			AtStart(data);
+		} else {
+			Node<T> node = head;
+			for (int i = 0; i < index - 1; i++) {
+				node = node.next;
+			}
+			newNode.next = node.next;
+			node.next = newNode;
+		}
+	}
+	
 	/**
 	 * Printing The Data Of Node till next equal to null
 	 */
