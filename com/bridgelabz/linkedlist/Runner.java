@@ -14,7 +14,7 @@ public class Runner<T> {
 		List.show();
 		System.out.println("Before deletion First node");
 		List.deleteFirst();
-		System.out.println("Before deletion First node");
+		System.out.println("After deletion First node");
 		List.show();
 
 	}
