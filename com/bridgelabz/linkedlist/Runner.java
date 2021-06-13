@@ -6,11 +6,11 @@ public class Runner<T> {
 		
 		LinkedList <Integer> List = new LinkedList<Integer>();
 		System.out.println("Before deletion First node");
+		List.add(56);
 		List.add(30);
 		List.add(70);
-		List.add(30);
-		List.AtStart(25);
-		List.AddAtIndex(2,32);
+		List.AtStart(30);
+		List.AddAtIndex(2,30);
 		List.show();
 		List.deleteFirst();
 		System.out.println("After deletion First node");
@@ -18,6 +18,7 @@ public class Runner<T> {
 		List.deleteLast();
 		System.out.println("Last Node Deleted");
 		List.show();
+		List.SearchOperation(30);
 
 	}
 }
