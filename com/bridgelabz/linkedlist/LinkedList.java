@@ -22,7 +22,15 @@ public class LinkedList<T> {
 			node.next = newNode;
 		}
 	}
-
+	/**
+	 * @param Node data added at Start
+	 */
+	public void AtStart(T data) {
+		Node<T> node =new Node<>();
+		node.data=data;
+		node.next=head;
+		head=node;
+	}
 	/**
 	 * Printing The Data Of Node till next equal to null
 	 */
