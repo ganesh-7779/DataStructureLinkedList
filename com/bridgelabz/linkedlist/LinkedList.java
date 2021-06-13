@@ -63,6 +63,9 @@ public class LinkedList<T> {
 			head=Head;
 		}
 	}
+	/**
+	 * Delete Last Node Operation
+	 */
 	public void deleteLast() {
 		Node<T> node = head;
 		Node<T> PreviousNode = head;
@@ -71,6 +74,18 @@ public class LinkedList<T> {
 			node = node.next;
 		}
 		PreviousNode.next = null;
+	}
+	public void SearchOperation (T data ) {
+		Node<T> P = head;
+		P.data=data;
+		while(P !=null) {
+			if(P.data==data) {
+				System.out.println("Element Found");
+				break;
+			}
+			P=P.next;
+		}
+		
 	}
 	/**
 	 * Printing The Data Of Node till next equal to null
