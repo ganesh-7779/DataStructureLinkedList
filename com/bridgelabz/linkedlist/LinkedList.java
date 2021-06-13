@@ -52,7 +52,17 @@ public class LinkedList<T> {
 			node.next = newNode;
 		}
 	}
-	
+	/**
+	 * @param data
+	 * Deleting first Node from Link
+	 */
+	public void deleteFirst (){
+		if (head != null) {
+			Node<T> Head = head.next;
+			
+			head=Head;
+		}
+	}
 	/**
 	 * Printing The Data Of Node till next equal to null
 	 */

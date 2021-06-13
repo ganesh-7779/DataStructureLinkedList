@@ -12,5 +12,10 @@ public class Runner<T> {
 		List.AtStart(25);
 		List.AddAtIndex(2,32);
 		List.show();
+		System.out.println("Before deletion First node");
+		List.deleteFirst();
+		System.out.println("Before deletion First node");
+		List.show();
+
 	}
 }
